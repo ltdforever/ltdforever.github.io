@@ -17,11 +17,26 @@ body {
 }
 .logo {
 	width:18vw;
-	margin: auto;
+	margin: 0 auto 25px;
 }
 .logo img {
 	width: 100%;
 	height: auto;
+	transform: translateX(6%);
+}
+.social a span {
+	font-size:25px;
+	color:white;
+	margin:0 15px;
+}
+.social a span:hover {
+	color:#00B9DA;
+}
+.social a:nth-child(even) span:hover {
+	color:#FF3300;
+}
+.social a:nth-child(3n+0) span:hover {
+	color:#FFD100;
 }
 .spotify {
 	width:75%;
