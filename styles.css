@@ -1,5 +1,8 @@
 body {
 	background: black;
+	width:100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 .main {
 	position: absolute;
@@ -26,4 +29,29 @@ body {
 }
 .spotify iframe {
 	height: 130px;
+}
+.blue, .yellow, .red {
+	width:100vw;
+	height:5vw;
+}
+.blue {
+	background: #00B9DA;
+}
+.yellow {
+	background: #FFD100;
+}
+.red {
+	background: #FF3300;
+}
+.left_stripes {
+	position: absolute;
+	left: -46vw;
+    top: -1vw;
+	transform: rotate(-45deg);
+}
+.right_stripes {
+	position: absolute;
+	right: -46vw;
+    bottom: -1vw;
+	transform:  rotate(-45deg);
 }
