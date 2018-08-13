@@ -1,17 +1,29 @@
 body {
 	background: black;
 }
-.logo {
+.main {
 	position: absolute;
 	margin: auto;
-	width:18%;
+	text-align: center;
+	width:100%;
 	height: auto;
 	left:0;
 	right:0;
-	top:50%;
-	transform: translateY(-50%);
+	top:40%;
+	transform: translateY(-40%);
+}
+.logo {
+	width:18vw;
+	margin: auto;
 }
 .logo img {
 	width: 100%;
 	height: auto;
+}
+.spotify {
+	width:75%;
+	margin: 25px auto;
+}
+.spotify iframe {
+	height: 130px;
 }
