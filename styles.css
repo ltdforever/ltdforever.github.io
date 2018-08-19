@@ -73,3 +73,19 @@ body {
     bottom: -1vw;
 	transform:  rotate(-45deg);
 }
+
+@media only screen and (max-width:768px) {
+	.main {
+		top:35%;
+		translateY(-35%);
+	}
+	.logo {
+		width:30vw;
+	}
+	.blue, .yellow, .red {
+		height:10vw;
+	}
+	.spotify {
+		width:95%;
+	}
+}
