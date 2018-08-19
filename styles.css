@@ -50,7 +50,7 @@ body {
 	height:5vw;
 }
 .blue.off, .yellow.off, .red.off {
-	opacity: .7;
+	opacity: .6;
 }
 .blue {
 	background: #00B9DA;
