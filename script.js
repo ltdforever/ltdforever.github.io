@@ -1,78 +1,55 @@
 $(document).ready(function () {
 
-	setTimeout(function () {
-		$(".left_stripes .blue").removeClass('off');
-	}, 350);
-	setTimeout(function () {
-		$(".left_stripes .yellow").removeClass('off');
-	}, 750);
-	setTimeout(function () {
-		$(".left_stripes .red").removeClass('off');
-	}, 1050);
-	setTimeout(function () {
-		$(".left_stripes .blue").addClass('off');
-	}, 1450);
-	setTimeout(function () {
-		$(".left_stripes .yellow").addClass('off');
-	}, 1500);
-	setTimeout(function () {
-		$(".left_stripes .red").addClass('off');
-	}, 1550);
-	setTimeout(function () {
-		$(".right_stripes .red").removeClass('off');
-	}, 350);
-	setTimeout(function () {
-		$(".right_stripes .yellow").removeClass('off');
-	}, 750);
-	setTimeout(function () {
-		$(".right_stripes .blue").removeClass('off');
-	}, 1050);
-	setTimeout(function () {
-		$(".right_stripes .red").removeClass('off');
-	}, 1450);
-	setTimeout(function () {
-		$(".right_stripes .yellow").removeClass('off');
-	}, 1500);
-	setTimeout(function () {
-		$(".right_stripes .blue").removeClass('off');
-	}, 1600);
-
+	
+	
+	
+	function getFlicker() {
+		var rNum = Math.floor((Math.random() * 10) + 8);
+		return rNum;
+	}
+	function getDelay() {
+		var rNum2 = Math.floor((Math.random() * 1500) + 800);
+		return rNum2;
+	}
+	function getDelayShort() {
+		var rNum3 = Math.floor((Math.random() * 800) + 300);
+		return rNum3;
+	}
+	function runFlicker(selectorClass) {
+		var bTime = getDelay();
+		var bTime2 = getDelayShort();
+		setTimeout(function () {
+			$(selectorClass + " .blue").removeClass('off');
+		}, bTime);
+		setTimeout(function () {
+			$(selectorClass + " .blue").addClass('off');
+		}, bTime2);
+		
+		
+		var yTime = getDelay();
+		var yTime2 = getDelayShort();
+		setTimeout(function () {
+			$(selectorClass + " .yellow").removeClass('off');
+		}, yTime);
+		setTimeout(function () {
+			$(selectorClass + " .yellow").addClass('off');
+		}, yTime2);
+		
+		
+		var rTime = getDelay();
+		var rTime2 = getDelayShort();
+		setTimeout(function () {
+			$(selectorClass + " .red").removeClass('off');
+		}, rTime);
+		setTimeout(function () {
+			$(selectorClass + " .red").addClass('off');
+		}, rTime2);
+	}
+	
+	runFlicker(".left_stripes");
+	runFlicker(".right_stripes");
 	setInterval(function () {
-		setTimeout(function () {
-			$(".left_stripes .blue").removeClass('off');
-		}, 350);
-		setTimeout(function () {
-			$(".left_stripes .yellow").removeClass('off');
-		}, 750);
-		setTimeout(function () {
-			$(".left_stripes .red").removeClass('off');
-		}, 1050);
-		setTimeout(function () {
-			$(".left_stripes .blue").addClass('off');
-		}, 1450);
-		setTimeout(function () {
-			$(".left_stripes .yellow").addClass('off');
-		}, 1500);
-		setTimeout(function () {
-			$(".left_stripes .red").addClass('off');
-		}, 1550);
-		setTimeout(function () {
-			$(".right_stripes .red").removeClass('off');
-		}, 350);
-		setTimeout(function () {
-			$(".right_stripes .yellow").removeClass('off');
-		}, 750);
-		setTimeout(function () {
-			$(".right_stripes .blue").removeClass('off');
-		}, 1050);
-		setTimeout(function () {
-			$(".right_stripes .red").addClass('off');
-		}, 1450);
-		setTimeout(function () {
-			$(".right_stripes .yellow").addClass('off');
-		}, 1500);
-		setTimeout(function () {
-			$(".right_stripes .blue").addClassd('off');
-		}, 1600);
-	}, 1650);
+		runFlicker(".left_stripes");
+		runFlicker(".right_stripes");
+	}, 1500);
 });
