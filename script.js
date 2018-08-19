@@ -1,8 +1,8 @@
-$(document).ready(function () {
+//Stop looking at my fancy javascript
 
-	
-	
-	
+//its not even a good trade secret to steal
+
+$(document).ready(function () {
 	function getFlicker() {
 		var rNum = Math.floor((Math.random() * 10) + 8);
 		return rNum;
