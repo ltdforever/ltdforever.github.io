@@ -45,7 +45,8 @@ html, body {
 	margin: 25px auto;
 }
 .spotify iframe {
-	height: 130px;
+    max-width: 100%;
+    max-height: 56.25vw;
 }
 .blue, .yellow, .red {
 	width:100vw;
